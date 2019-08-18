@@ -1,0 +1,9 @@
+C:\Users\Boyd Price\Dropbox (Personal)\LumberCorp\BackUploader\BackUploader\bin\Debug\BackUploader.exe
+C:\Users\Boyd Price\Dropbox (Personal)\LumberCorp\BackUploader\BackUploader\bin\Debug\BackUploader.pdb
+C:\Users\Boyd Price\Dropbox (Personal)\LumberCorp\BackUploader\BackUploader\obj\Debug\BackUploader.csprojResolveAssemblyReference.cache
+C:\Users\Boyd Price\Dropbox (Personal)\LumberCorp\BackUploader\BackUploader\obj\Debug\BackUploader.exe
+C:\Users\Boyd Price\Dropbox (Personal)\LumberCorp\BackUploader\BackUploader\obj\Debug\BackUploader.pdb
+C:\Users\Boyd Price\Dropbox (Personal)\LumberCorp\BackUploader\BackUploader\bin\Debug\BackUploader.exe.manifest
+C:\Users\Boyd Price\Dropbox (Personal)\LumberCorp\BackUploader\BackUploader\bin\Debug\BackUploader.application
+C:\Users\Boyd Price\Dropbox (Personal)\LumberCorp\BackUploader\BackUploader\obj\Debug\BackUploader.exe.manifest
+C:\Users\Boyd Price\Dropbox (Personal)\LumberCorp\BackUploader\BackUploader\obj\Debug\BackUploader.application

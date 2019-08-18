@@ -1,0 +1,18 @@
+C:\Users\Boyd Price\Dropbox\LumberCorp\StockUploader\bin\Debug\StockUploader.exe
+C:\Users\Boyd Price\Dropbox\LumberCorp\StockUploader\bin\Debug\StockUploader.pdb
+C:\Users\Boyd Price\Dropbox\LumberCorp\StockUploader\obj\Debug\StockUploader.csprojResolveAssemblyReference.cache
+C:\Users\Boyd Price\Dropbox\LumberCorp\StockUploader\obj\Debug\StockUploader.exe
+C:\Users\Boyd Price\Dropbox\LumberCorp\StockUploader\obj\Debug\StockUploader.pdb
+C:\Users\Boyd Price\Dropbox\LumberCorp\StockUploader\bin\Debug\StockUploader.exe.manifest
+C:\Users\Boyd Price\Dropbox\LumberCorp\StockUploader\bin\Debug\StockUploader.application
+C:\Users\Boyd Price\Dropbox\LumberCorp\StockUploader\obj\Debug\StockUploader.exe.manifest
+C:\Users\Boyd Price\Dropbox\LumberCorp\StockUploader\obj\Debug\StockUploader.application
+C:\Users\Boyd Price\Dropbox (Personal)\LumberCorp\StockUploader\obj\Debug\StockUploader.exe
+C:\Users\Boyd Price\Dropbox (Personal)\LumberCorp\StockUploader\obj\Debug\StockUploader.pdb
+C:\Users\Boyd Price\Dropbox (Personal)\LumberCorp\StockUploader\bin\Debug\StockUploader.exe.manifest
+C:\Users\Boyd Price\Dropbox (Personal)\LumberCorp\StockUploader\bin\Debug\StockUploader.application
+C:\Users\Boyd Price\Dropbox (Personal)\LumberCorp\StockUploader\bin\Debug\StockUploader.exe
+C:\Users\Boyd Price\Dropbox (Personal)\LumberCorp\StockUploader\bin\Debug\StockUploader.pdb
+C:\Users\Boyd Price\Dropbox (Personal)\LumberCorp\StockUploader\obj\Debug\StockUploader.csprojResolveAssemblyReference.cache
+C:\Users\Boyd Price\Dropbox (Personal)\LumberCorp\StockUploader\obj\Debug\StockUploader.exe.manifest
+C:\Users\Boyd Price\Dropbox (Personal)\LumberCorp\StockUploader\obj\Debug\StockUploader.application

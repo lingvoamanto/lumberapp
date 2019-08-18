@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+  .wrapper {
+    background: url('images/background.gif') repeat;
+    background-position:left top;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 700px;
+    padding-top: 10px;
+    position: relative;
+    overflow: hidden;
+    width: 960px;
+  }
+  
+  .logo {
+    float:right;
+  }
+  
+  .navigation {
+    margin-left: 23px;
+    padding-left: 0px;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-size: 14pt;
+    list-style-type: none;
+    margin-top: 0px;
+    font-weight: bold;
+    margin-right: 23px;
+    padding-top: 0px;
+  }
+      
+  .navigation li {
+    float: left;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+      
+  .navigation li:first-child {
+    margin-left:0px;
+  }
+      
+  .navigation li:last-child {
+    margin-right:0px;
+        float:right;
+  }
+      
+  .navigation li.selected {
+     background: url('images/selected_large_wood.png') no-repeat;
+     list-style-type: none;
+     padding: 3px 0px 0px 28px;
+     vertical-align: middle;
+     color: rgb(62,32,8);
+  }
+      
+  .navigation li.unselected {
+     background: url('images/unselected_large_wood.png') no-repeat;
+     list-style-type: none;
+     padding: 3px 0px 0px 28px;
+     vertical-align: middle;
+     color: rgb(120,96,50);
+  }
+      
+  .navigation a {
+     text-decoration: none;
+     margin-top: -3px;
+  }    
+      
+  .navigation li.selected a,  .navigation li.selected a:visited {
+     text-decoration: none;
+     margin-top: -3px;
+     color: rgb(62,32,8);
+  }    
+      
+  .navigation li.unselected a, .navigation li.unselected a:visited {
+     text-decoration: none;
+     margin-top: -3px;
+     color: rgb(120,96,50);
+  }    
+      
+  .navigation a:visisted {
+     text-decoration: none
+     color: rgb(120,96,50);
+  }
+      
+  hr {
+    border: 0;
+    width: 100%;
+    color: #f00;
+    background-color: rgb(204,153,102);
+    height: 1px;
+  }
+      
+  .left-panel {
+    width: 30%;
+    float:left;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-right: 30px;
+  }
+      
+  .content {
+    width: 50%;
+        border-left: 1px solid rgb(204,153,102);  
+    float: left;
+                margin-left: 0px;
+        margin-right: 0px;
+        padding-left:30px;
+        padding-right:10%;
+        padding-bottom: 50px;
+  }
+      
+      .main {
+        margin-top:50px;
+        clear:both;
+        margin-bottom: 50px;
+      }
+      
+      p {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 12pt;
+        color: rgb(62,32,8);
+        margin-top: 0px;
+      }
+      
+      .footer {       
+        border-top: 1px solid rgb(204,153,102); 
+        padding-top: 7px;
+      }
+      
+      div.legals {
+        float
+      }
+      
+  div.legals {
+        height:25px; clear: both; float:right;
+            margin-left: 23px;
+    padding-left: 0px;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-size: 9pt;
+    list-style-type: none;
+    margin-top: 0px;
+    margin-right: 23px;
+    padding-top: 0px;
+        color: rgb(62,32,8);
+      }    
+      
+  .legals a {
+        color: rgb(62,32,8);
+    text-decoration:none;
+  }
+      
+      body {
+      
+        margin-top: 0px;
+        background-color: rgb(62,32,8);
+      }
+      
+      #slideshow {
+          position:relative;
+          height:230px;
+      }
+      
+      #slideshow IMG {
+          position:absolute;
+          top:0;
+          left:0;
+          z-index:8;
+      }
+      
+      #slideshow IMG.active {
+          z-index:10;
+      }
+      
+      #slideshow IMG.last-active {
+          z-index:9;
+      }
+      
+  </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <div class="logo"> <img src="images/logo.png"> </div>
+        <hr style="clear:both">
+        <div id="slideshow"> <img src="images/front-1.png" alt="" class="active">
+          <img src="images/front-2.png" alt=""> <img src="images/front-3.png" alt=""></div>
+        <hr style="clear:both">
+        <div style="margin-top:-10px;">
+          <div style="height:25px; clear: both;">
+            <ul class="navigation">
+              <li class="selected"> <a href="#">ABOUT US</a></li>
+              <li class="unselected"> <a href="#">PROCESSING SERVICES</a></li>
+              <li class="unselected"> <a href="#">TIMBER SALES</a></li>
+              <li class="unselected"> <a href="#">SPECIALS</a></li>
+              <li class="unselected"> <a href="#">CONTACT US</a></li>
+            </ul>
+          </div>
+          <hr> </div>
+      </div>
+      <div class="main">
+        <form id="" runat="server">
+          <div class="left-panel"> <img src="images/front-side-1.png"></div>
+          <div class="content">
+            <p>Lumbercorp is a wholesale supplier of timber products to the New
+              Zealand, Australian and Pacific Island markets as well as a
+              provider of custom Kiln drying, CCA and LOSP treatment and timber
+              machining.</p>
+            <p>Located at Ohinewai in the North Waikato, Lumbercorp is ideally
+              situated to service the Auckland, Waikato and Bay of Plenty
+              markets.</p>
+            <p>Lumbercorp also operates a state of the art LOSP plant at Te Puke
+              in the Bay of Plenty. This plant’s proximity to local timber
+              manufactures and the Tauranga wharves is ideal for product that
+              requires treating for export as well as wrapping and unitising.</p>
+          </div>
+        </form>
+      </div>
+      <div style="padding-top:50px;margin-top:10px;clear: both;">
+        <div class="footer">
+          <div class="legals"> <a href="#">Disclaimer</a> | <a href="#">Privacy
+              Policy</a> </div>
+        </div>
+      </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js" type=""></script>
+    <script type="">
+    
+      function slideSwitch() {
+          var $active = $('#slideshow IMG.active');
+      
+          if ( $active.length == 0 ) $active = $('#slideshow IMG:last');
+      
+          var $next =  $active.next().length ? $active.next()
+              : $('#slideshow IMG:first');
+      
+          $active.addClass('last-active');
+              
+          $next.css({opacity: 0.0})
+              .addClass('active')
+              .animate({opacity: 1.0}, 1000, function() {
+                  $active.removeClass('active last-active');
+              });
+      }
+      
+      $(function() {
+          setInterval( "slideSwitch()", 10000 );
+      });
+    </script>
+    
+  </body>
+</html>

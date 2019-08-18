@@ -1,0 +1,565 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{078B3C4F-C377-460E-8838-DA3EED6D0BDA}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LumberCorp</RootNamespace>
+    <AssemblyName>LumberCorp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Optimization, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>packages\Microsoft.AspNet.Providers.Core.1.1\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="MySql.Data">
+      <HintPath>packages\MySql.Data.6.7.9\lib\net45\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Security" />
+    <Reference Include="ExcelDataReader">
+      <HintPath>packages\ExcelDataReader.3.6.0\lib\net45\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="404.aspx" />
+    <Content Include="js\jquery-1.9.0.js" />
+    <Content Include="js\jquery.validate.min.js" />
+    <Content Include="Pages\About.aspx" />
+    <Content Include="Controls\AdminControl.ascx" />
+    <Content Include="Pages\Approve.aspx" />
+    <Content Include="Controls\FooterControl.ascx" />
+    <Content Include="Controls\DetailControl.ascx" />
+    <Content Include="EditImages.aspx" />
+    <Content Include="Pages\BackOrders.aspx" />
+    <Content Include="Pages\Contacts.aspx" />
+    <Content Include="Pages\DownloadApp.aspx" />
+    <Content Include="Pages\EditContacts.aspx" />
+    <Content Include="Services\ContactService.asmx" />
+    <Content Include="Services\UserService.asmx" />
+    <Content Include="Controls\StockControl.ascx" />
+    <Content Include="Pages\Cart.aspx" />
+    <Content Include="Pages\Contact.aspx" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="css\default.css" />
+    <Content Include="Edit.aspx" />
+    <Content Include="images\background.gif" />
+    <Content Include="images\background.png" />
+    <Content Include="images\front-1.png" />
+    <Content Include="images\front-2.png" />
+    <Content Include="images\front-3.png" />
+    <Content Include="images\front-side-1.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\selected_large_wood.png" />
+    <Content Include="images\unselected_large_wood.png" />
+    <Content Include="LumberService.asmx" />
+    <Content Include="Pages\Register.aspx" />
+    <Content Include="Pages\Stock.aspx" />
+    <Content Include="Tests\Email.aspx" />
+    <Content Include="Tests\Subscribe.aspx" />
+    <Content Include="tinymce\tinymce\changelog.txt" />
+    <Content Include="tinymce\tinymce\js\tinymce\license.txt" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\advlist\plugin.min.js" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\anchor\plugin.min.js" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\autolink\plugin.min.js" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\autoresize\plugin.min.js" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\autosave\plugin.min.js" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\bbcode\plugin.min.js" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\charmap\plugin.min.js" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\code\plugin.min.js" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\compat3x\editable_selects.js" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\compat3x\form_utils.js" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\compat3x\mctabs.js" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\compat3x\tiny_mce_popup.js" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\compat3x\validate.js" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\contextmenu\plugin.min.js" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\directionality\plugin.min.js" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\emoticons\img\smiley-cool.gif" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\emoticons\img\smiley-cry.gif" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\emoticons\img\smiley-embarassed.gif" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\emoticons\img\smiley-foot-in-mouth.gif" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\emoticons\img\smiley-frown.gif" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\emoticons\img\smiley-innocent.gif" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\emoticons\img\smiley-kiss.gif" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\emoticons\img\smiley-laughing.gif" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\emoticons\img\smiley-money-mouth.gif" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\emoticons\img\smiley-sealed.gif" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\emoticons\img\smiley-smile.gif" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\emoticons\img\smiley-surprised.gif" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\emoticons\img\smiley-tongue-out.gif" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\emoticons\img\smiley-undecided.gif" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\emoticons\img\smiley-wink.gif" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\emoticons\img\smiley-yell.gif" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\emoticons\plugin.min.js" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\example\plugin.min.js" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\example_dependency\plugin.min.js" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\fullpage\plugin.min.js" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\fullscreen\plugin.min.js" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\hr\plugin.min.js" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\image\plugin.min.js" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\importcss\plugin.min.js" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\insertdatetime\plugin.min.js" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\layer\plugin.min.js" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\legacyoutput\plugin.min.js" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\link\plugin.min.js" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\lists\plugin.min.js" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\media\moxieplayer.swf" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\media\plugin.min.js" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\nonbreaking\plugin.min.js" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\noneditable\plugin.min.js" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\pagebreak\plugin.min.js" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\paste\plugin.min.js" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\preview\plugin.min.js" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\print\plugin.min.js" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\save\plugin.min.js" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\searchreplace\plugin.min.js" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\spellchecker\plugin.min.js" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\tabfocus\plugin.min.js" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\table\plugin.min.js" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\template\plugin.min.js" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\textcolor\plugin.min.js" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\visualblocks\css\visualblocks.css" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\visualblocks\plugin.min.js" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\visualchars\plugin.min.js" />
+    <Content Include="tinymce\tinymce\js\tinymce\plugins\wordcount\plugin.min.js" />
+    <Content Include="tinymce\tinymce\js\tinymce\skins\lightgray\content.inline.min.css" />
+    <Content Include="tinymce\tinymce\js\tinymce\skins\lightgray\content.min.css" />
+    <Content Include="tinymce\tinymce\js\tinymce\skins\lightgray\fonts\icomoon-small.svg" />
+    <Content Include="tinymce\tinymce\js\tinymce\skins\lightgray\fonts\icomoon.svg" />
+    <Content Include="tinymce\tinymce\js\tinymce\skins\lightgray\img\anchor.gif" />
+    <Content Include="tinymce\tinymce\js\tinymce\skins\lightgray\img\loader.gif" />
+    <Content Include="tinymce\tinymce\js\tinymce\skins\lightgray\img\object.gif" />
+    <Content Include="tinymce\tinymce\js\tinymce\skins\lightgray\img\trans.gif" />
+    <Content Include="tinymce\tinymce\js\tinymce\skins\lightgray\img\wline.gif" />
+    <Content Include="tinymce\tinymce\js\tinymce\skins\lightgray\skin.ie7.min.css" />
+    <Content Include="tinymce\tinymce\js\tinymce\skins\lightgray\skin.min.css" />
+    <Content Include="tinymce\tinymce\js\tinymce\themes\modern\theme.min.js" />
+    <Content Include="tinymce\tinymce\js\tinymce\tinymce.min.js" />
+    <Content Include="tinymce\tinymce\LICENSE.TXT" />
+    <Content Include="packages.config" />
+    <Content Include="images\Thumbs.db" />
+    <Content Include="tinymce\tinymce\js\tinymce\langs\readme.md" />
+    <Content Include="tinymce\tinymce\js\tinymce\skins\lightgray\fonts\icomoon-small.eot" />
+    <Content Include="tinymce\tinymce\js\tinymce\skins\lightgray\fonts\icomoon-small.ttf" />
+    <Content Include="tinymce\tinymce\js\tinymce\skins\lightgray\fonts\icomoon-small.woff" />
+    <Content Include="tinymce\tinymce\js\tinymce\skins\lightgray\fonts\icomoon.eot" />
+    <Content Include="tinymce\tinymce\js\tinymce\skins\lightgray\fonts\icomoon.ttf" />
+    <Content Include="tinymce\tinymce\js\tinymce\skins\lightgray\fonts\icomoon.woff" />
+    <Content Include="tinymce\tinymce\js\tinymce\skins\lightgray\fonts\readme.md" />
+    <Content Include="LumberHandler.ashx" />
+    <Content Include="WebForm1.aspx" />
+    <Content Include="ImageHandler.ashx" />
+    <Content Include="Handlers\MobileHandler.ashx" />
+    <Content Include="Handlers\OrderHandler.ashx" />
+    <Content Include="Handlers\BackHandler.ashx" />
+    <None Include="Properties\PublishProfiles\LumberCorp.pubxml" />
+    <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Pages\Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Pages\Users.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Scripts\Bundle.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="404.aspx.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="404.aspx.designer.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\OrderItem.cs" />
+    <Compile Include="Handlers\BackHandler.ashx.cs">
+      <DependentUpon>BackHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AdminControl.ascx.cs">
+      <DependentUpon>AdminControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\AdminControl.ascx.designer.cs">
+      <DependentUpon>AdminControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Approve.aspx.cs">
+      <DependentUpon>Approve.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Approve.aspx.designer.cs">
+      <DependentUpon>Approve.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Contact.cs" />
+    <Compile Include="Classes\Email.cs" />
+    <Compile Include="Classes\MobileResponse.cs" />
+    <Compile Include="Classes\Order.cs" />
+    <Compile Include="Controls\FooterControl.ascx.cs">
+      <DependentUpon>FooterControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\FooterControl.ascx.designer.cs">
+      <DependentUpon>FooterControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DetailControl.ascx.cs">
+      <DependentUpon>DetailControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\DetailControl.ascx.designer.cs">
+      <DependentUpon>DetailControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditImages.aspx.cs">
+      <DependentUpon>EditImages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditImages.aspx.designer.cs">
+      <DependentUpon>EditImages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\MobileHandler.ashx.cs">
+      <DependentUpon>MobileHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\OrderHandler.ashx.cs">
+      <DependentUpon>OrderHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ImageHandler.ashx.cs">
+      <DependentUpon>ImageHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="MailChimp.cs" />
+    <Compile Include="Pages\BackOrders.aspx.cs">
+      <DependentUpon>BackOrders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\BackOrders.aspx.designer.cs">
+      <DependentUpon>BackOrders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Contacts.aspx.cs">
+      <DependentUpon>Contacts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Contacts.aspx.designer.cs">
+      <DependentUpon>Contacts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\DownloadApp.aspx.cs">
+      <DependentUpon>DownloadApp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\DownloadApp.aspx.designer.cs">
+      <DependentUpon>DownloadApp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EditContacts.aspx.cs">
+      <DependentUpon>EditContacts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\EditContacts.aspx.designer.cs">
+      <DependentUpon>EditContacts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Repository\Contact.cs" />
+    <Compile Include="Services\ContactService.asmx.cs">
+      <DependentUpon>ContactService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Services\UserService.asmx.cs">
+      <DependentUpon>UserService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\StockControl.ascx.cs">
+      <DependentUpon>StockControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AES.cs" />
+    <Compile Include="Pages\Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\CartItem.cs" />
+    <Compile Include="Pages\Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Content.cs" />
+    <Compile Include="Repository\ContentManagementSystem.cs" />
+    <Compile Include="Pages\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Image.cs" />
+    <Compile Include="LumberHandler.ashx.cs">
+      <DependentUpon>LumberHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="LumberService.asmx.cs">
+      <DependentUpon>LumberService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\MenuItem.cs" />
+    <Compile Include="Classes\Node.cs" />
+    <Compile Include="Repository\Price.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Pages\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Status.cs" />
+    <Compile Include="Pages\Stock.aspx.cs">
+      <DependentUpon>Stock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Stock.aspx.designer.cs">
+      <DependentUpon>Stock.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\StockControl.ascx.designer.cs">
+      <DependentUpon>StockControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\StockItem.cs" />
+    <Compile Include="Classes\User.cs" />
+    <Compile Include="Pages\Users.aspx.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Users.aspx.designer.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\Email.aspx.cs">
+      <DependentUpon>Email.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tests\Email.aspx.designer.cs">
+      <DependentUpon>Email.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\Subscribe.aspx.cs">
+      <DependentUpon>Subscribe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tests\Subscribe.aspx.designer.cs">
+      <DependentUpon>Subscribe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Repository\TableManager.cs" />
+    <Compile Include="Classes\Pagination.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Classes\NewFolder1\" />
+    <Folder Include="data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58904</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:52217/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+    <MonoDevelop>
+      <Properties>
+        <XspParameters Port="8080" Address="127.0.0.1" SslMode="None" SslProtocol="Default" KeyType="None" CertFile="" KeyFile="" PasswordOptions="None" Password="" Verbose="True" />
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

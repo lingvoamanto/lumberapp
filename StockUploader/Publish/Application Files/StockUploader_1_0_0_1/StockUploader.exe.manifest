@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="StockUploader.exe" version="1.0.0.1" publicKeyToken="8aee5825d0c5bfcf" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="StockUploader" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="StockUploader.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="StockUploader.exe" size="7680">
+      <assemblyIdentity name="StockUploader" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>qcQ+vztgBVgkw1jhwiAbHCiZW4I=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+<publisherIdentity name="CN=COMPAQ\Boyd Price" issuerKeyHash="6a8b9cd3747d42aadd33709cb7051f2e0f5a6303" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>eo+7f+0IUk4/CXtDRpI58Qq/RHs=</DigestValue></Reference></SignedInfo><SignatureValue>YXY6Leqdb+nqo2s1MJyTH4QB8zRWWjppYzOo3syhNCR/tCOBGP5VPAEgEJ9fOya1Ywqz1vZj8cy1AK8fB0AeGGugFnGIkbQMj1QfZf0elZ7YNdbOUdRgyZN+VMjIhAheBMkt/UkPvFBHOAaINARydPkMSwdBHLQGWBMZKDbB91w=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>rZBtVPBa6og1j+Zm8gw9QG4PizxwM4TjvDQuZUHTsEdnPL13XCnbnTR96dOs2FcKy0rnqMHAoIPgTqnyV/D5CgnDLMUjO8JKXX7vOfz65wbuZh5MqznEw8XImn+GzlD/McTVz+ifE6TATum3FO3aygsA5rwR0FqZcEZTIpWC0vE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="7b44bf0af1399246437b093f4e5208ed7fbb8f7a" Description="" Url=""><as:assemblyIdentity name="StockUploader.exe" version="1.0.0.1" publicKeyToken="8aee5825d0c5bfcf" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=COMPAQ\Boyd Price</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>jfJwwUuxjvQXx7B0VLsJoXiAeaw=</DigestValue></Reference></SignedInfo><SignatureValue>glevW7b8+rZzwFDZ2QQyKK83aKqfh1zTrM9u9px3LfrSX57lJmAKq+kaHJBva7IrTkzuLa2V2HkPtAgVD10kJ27M+dU+fQVzKJxZJSKHldcrAbKB7/NO3kg04uN31k3fR6XqfSyn7pALaMp6iGKf7jVO9og7HcW1VMTm6bcZ8ls=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>rZBtVPBa6og1j+Zm8gw9QG4PizxwM4TjvDQuZUHTsEdnPL13XCnbnTR96dOs2FcKy0rnqMHAoIPgTqnyV/D5CgnDLMUjO8JKXX7vOfz65wbuZh5MqznEw8XImn+GzlD/McTVz+ifE6TATum3FO3aygsA5rwR0FqZcEZTIpWC0vE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB3TCCAUagAwIBAgIQX12DSB9/yLVGNsHOhm6pdTANBgkqhkiG9w0BAQUFADAtMSswKQYDVQQDHiIAQwBPAE0AUABBAFEAXABCAG8AeQBkACAAUAByAGkAYwBlMB4XDTEzMTIwNjAwNDc1MFoXDTE0MTIwNjA2NDc1MFowLTErMCkGA1UEAx4iAEMATwBNAFAAQQBRAFwAQgBvAHkAZAAgAFAAcgBpAGMAZTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEArZBtVPBa6og1j+Zm8gw9QG4PizxwM4TjvDQuZUHTsEdnPL13XCnbnTR96dOs2FcKy0rnqMHAoIPgTqnyV/D5CgnDLMUjO8JKXX7vOfz65wbuZh5MqznEw8XImn+GzlD/McTVz+ifE6TATum3FO3aygsA5rwR0FqZcEZTIpWC0vECAwEAATANBgkqhkiG9w0BAQUFAAOBgQCDuSvguJeUBxk1Mj86SHEBjw1xW3KAFREru5dq3WvMO4MTR5xYe8z1Sqox7IHiuP752Fxoo5q26MU2yjGNWRIe2SC216Qvk7Zvb20+J+N8gpNEPndopRxqbVHej9ZUQVx49mzKO91VawvOGVi3wN5dueAo+s7Z0kDlk9kYrVnkOw==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

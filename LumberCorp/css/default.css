@@ -1,0 +1,403 @@
+﻿.wrapper {
+    background: url('/images/background.gif') repeat;
+    background-position:left top;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    position: relative;
+    overflow: hidden;
+    width: 960px;
+}
+  
+.logo {
+    float:right;
+}
+
+.user-first
+{
+    width:105px;
+}
+
+.user-last
+{
+    width:90px;
+}
+
+.user-email
+{
+    width:190px;
+}
+
+.user-code
+{
+    width:60px;
+}
+  
+.navigation {
+    margin-left: 23px;
+    padding-left: 0px;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-size: 14pt;
+    list-style-type: none;
+    margin-top: 0px;
+    font-weight: bold;
+    margin-right: 23px;
+    padding-top: 0px;
+}
+      
+.navigation li {
+    float: left;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+      
+.navigation li:first-child {
+    margin-left:0px;
+}
+      
+.navigation li:last-child {
+    margin-right:0px;
+    float:right;
+}
+      
+.navigation li.selected {
+    background: url('/images/selected_large_wood.png') no-repeat;
+    list-style-type: none;
+    padding: 3px 0px 0px 28px;
+    vertical-align: middle;
+    color: rgb(62,32,8);
+}
+      
+.navigation li.unselected {
+    background: url('/images/unselected_large_wood.png') no-repeat;
+    list-style-type: none;
+    padding: 3px 0px 0px 28px;
+    vertical-align: middle;
+    color: rgb(120,96,50);
+}
+      
+.navigation a {
+    text-decoration: none;
+    margin-top: -3px;
+}    
+      
+.navigation li.selected a,  .navigation li.selected a:visited {
+    text-decoration: none;
+    margin-top: -3px;
+    color: rgb(62,32,8);
+}    
+      
+.navigation li.unselected a, .navigation li.unselected a:visited {
+    text-decoration: none;
+    margin-top: -3px;
+    color: rgb(120,96,50);
+}    
+      
+.navigation a:visited {
+    text-decoration: none;
+    color: rgb(120,96,50);
+}
+      
+hr {
+    border: 0;
+    width: 100%;
+    color: #f00;
+    background-color: rgb(204,153,102);
+    height: 1px;
+}
+      
+.left-panel {
+    width: 30%;
+    float:left;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-right: 30px;
+}
+      
+.content {
+    width: 50%;
+    border-left: 1px solid rgb(204,153,102);  
+    float: left;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left:30px;
+    padding-right:10%;
+    padding-bottom: 50px;
+}
+      
+.main {
+    margin-top:50px;
+    clear:both;
+    margin-bottom: 50px;
+}
+      
+p, li, td, summary {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(62,32,8);
+    margin-top: 0px;
+}
+
+p {
+    font-size: 12pt;
+}
+
+summary
+{
+    font-weight: bold;
+}
+
+table
+{
+    margin-bottom: 18px; 
+}
+
+td
+{
+    font-size: 10pt;
+}
+      
+.footer {       
+    border-top: 1px solid rgb(204,153,102); 
+    padding-top: 7px;
+}
+
+div.save
+{
+    height:25px; float:left;
+}
+      
+div.legals {
+    height:25px; clear: both; float:right;
+    margin-left: 23px;
+    padding-left: 0px;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-size: 9pt;
+    list-style-type: none;
+    margin-top: 0px;
+    margin-right: 23px;
+    padding-top: 0px;
+    color: rgb(62,32,8);
+    }    
+      
+.legals a {
+    color: rgb(62,32,8);
+    text-decoration:none;
+}
+      
+body {     
+    margin-top: 0px;
+    background-color: rgb(62,32,8);
+}
+      
+#slideshow {
+    position:relative;
+    height:230px;
+}
+
+#sideshow {
+	position:relative;
+	width: 268px;
+	height: 188px;
+}
+      
+#slideshow IMG, #sideshow IMG {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:8;
+}
+      
+#slideshow IMG.active, #sideshow IMG.active {
+    z-index:10;
+}
+      
+#slideshow IMG.last-active, #sideshow IMG.last-active {
+    z-index:9;
+}
+
+.module {
+    margin-top: 18px 0 0 0;
+    width: 236px;
+    padding: 14px 16px 14px 16px;
+    background-color: rgba(255,255,255,0.8);
+    border-bottom-width: 1px;
+    border-bottom-color: rgb(204,153,102);
+    border-bottom-style:solid;
+}
+
+    .module h3
+    {
+        color: rgb(204,153,102);
+        font-weight: bold;
+        font-size: 16px;
+        font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+        text-transform:uppercase;
+
+
+    }
+
+    .module a, .module a:visited, #login label
+    {
+        font-size: 16px;
+        font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+        font-weight: lighter;
+        color: rgb(120, 96, 50);
+        text-decoration: none;
+    }
+
+#login label
+{
+    display: inline-block;
+    width: 120px;
+}
+
+    button
+    {
+        padding-top:5px;
+        padding-bottom:5px;
+        margin: 0;
+        background: none;
+        background-color: rgba(204,153,102,0.8);
+        color:white;
+        font-weight: bold;
+        text-transform:uppercase;
+    }
+
+    #login button
+    {
+        width: 120px;
+        margin-top: 9px;
+    }
+
+#logout
+{
+    width: 268px;
+    margin: 18px 0 0 0;
+    padding: 0;
+}
+
+    #logout button
+    {
+        float:right;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+.sku-input
+{
+    text-align: right;
+    width:70px;
+}
+
+.grade-td
+{
+    width:70px;
+}
+
+.content a, .content a:visited {
+    color: rgb(204, 153, 102) !important;
+    text-decoration: none;
+}
+
+.order-customer, .order-customername {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(62,32,8);
+}
+
+.order-customername {
+    font-weight: bold;
+}
+
+td.order-customerref { text-align: left; }
+    td.order-customerref div
+    {
+        width: 70px;
+    }
+td.order-orderno { text-align: left; }
+    td.order-orderno div
+    {
+        width: 80px;
+    }
+td.order-grade { text-align: left; }
+    td.order-grade div
+    {
+        width: 70px;
+    }
+td.order-treatment { text-align: right; }
+    td.order-grade treatment
+    {
+        width: 70px;
+    }
+td.order-dryness { text-align: left; }
+    td.order-grade dryness
+    {
+        width: 70px;
+    }
+td.order-finish { text-align: left; }
+    td.order-grade finish
+    {
+        width: 70px;
+    }
+td.order-width { text-align: right; }
+    td.order-grade width
+    {
+        width: 70px;
+    }
+td.order-thickness { text-align: right; }
+    td.order-grade thickness
+    {
+        width: 70px;
+    }
+td.order-length { text-align: right; }
+    td.order-grade length
+    {
+        width: 70px;
+    }
+td.order-required { text-align: right; }
+    td.order-grade required
+    {
+        width: 70px;
+    }
+td.order-outstanding { text-align: right; }
+    td.order-grade outstanding
+    {
+        width: 70px;
+    }
+td.order-notes { text-align: left;  }
+    td.order-notes div
+    {
+        width: 200px;
+    }
+
+.order thead
+{
+    font-weight:bold;
+}
+
+.order thead, .order tbody
+{
+    border-bottom: 1px solid rgb(62,32,8);
+}
+
+.order tbody tr:nth-child(odd)    
+{ 
+    background-color:#fff; 
+}
+
+.paginate {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.paginate a {
+    background-color: rgb(79,157,42);
+    width: 60px;
+    padding: 5px 10px 10px 10px;
+    margin-right: 5px;
+    border-radius: 3px;
+}
+
+

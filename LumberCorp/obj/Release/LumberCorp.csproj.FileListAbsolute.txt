@@ -1,0 +1,7 @@
+C:\Users\Boyd Price\Dropbox\LumberCorp\LumberCorp\bin\LumberCorp.dll
+C:\Users\Boyd Price\Dropbox\LumberCorp\LumberCorp\bin\LumberCorp.pdb
+C:\Users\Boyd Price\Dropbox\LumberCorp\LumberCorp\bin\System.Web.Optimization.dll
+C:\Users\Boyd Price\Dropbox\LumberCorp\LumberCorp\bin\System.Web.Providers.dll
+C:\Users\Boyd Price\Dropbox\LumberCorp\LumberCorp\obj\Release\LumberCorp.csprojResolveAssemblyReference.cache
+C:\Users\Boyd Price\Dropbox\LumberCorp\LumberCorp\obj\Release\LumberCorp.dll
+C:\Users\Boyd Price\Dropbox\LumberCorp\LumberCorp\obj\Release\LumberCorp.pdb

@@ -1,0 +1,392 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="LumberCorp.SiteMaster" %>
+<%@ Register Src="~/Controls/FooterControl.ascx"  TagPrefix="fuc" TagName="FooterControl" %>
+
+<%@ Import namespace="LumberCorp" %>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head runat="server">
+        <meta http-equiv="X-UA-Compatible" content="IE=IE8" />
+        <meta charset="utf-8" />
+        <title><%: (CurrentNode==null ? "" : CurrentNode.Title) %></title>
+        <link rel="Stylesheet" href="css/default.css" />
+    </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <div class="logo"> <img src="/images/logo.png"> </div>
+        <hr style="clear:both">
+        <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
+        <div style="margin-top:-10px;">
+          <div style="height:25px; clear: both;">
+            <ul class="navigation">
+                <% User user = (User)HttpContext.Current.Session["user"];
+                   foreach( LumberCorp.MenuItem item in MainMenu )
+                   {
+                       if (item.Status <= (user==null?0 :user.Status))
+                       {
+                           if (CurrentNode == null)
+                               Response.Write("<li class=\"unselected\"> <a href=\"/" + item.Page + "\">" + item.Title + "</a></li>");
+                           else if (item.Page == CurrentNode.Page)
+                               Response.Write("<li class=\"selected\"> <a href=\"/" + item.Page + "\">" + item.Title + "</a></li>");
+                           else
+                               Response.Write("<li class=\"unselected\"> <a href=\"/" + item.Page + "\">" + item.Title + "</a></li>");
+                       } 
+                   }
+                %>
+            </ul>
+          </div>
+          <hr> </div>
+      </div>
+      <div class="main">
+        <form id="lumberform" runat="server">
+            <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+        </form>
+      </div>
+      <div style="padding-top:50px;margin-top:10px;clear: both;">
+        <div class="footer">
+          <div class="legals"> <a href="/disclaimer">Disclaimer</a> | <a href="/privacy">Privacy
+              Policy</a> </div>
+        </div>
+      </div>
+    </div>
+    <script src="/js/jquery-1.9.0.js"></script>
+    <script src="/js/jquery.validate.min.js" type="text/javascript"></script>
+    <script>
+
+        function slideSwitch() {
+            var $active = $('#slideshow IMG.active');
+
+            if ($active.length == 0) $active = $('#slideshow IMG:last');
+
+            var $next = $active.next().length ? $active.next()
+                : $('#slideshow IMG:first');
+
+            $active.addClass('last-active');
+
+            $next.css({ opacity: 0.0 })
+                .addClass('active')
+                .animate({ opacity: 1.0 }, 1000, function () {
+                    $active.removeClass('active last-active');
+                });
+        }
+
+        function updateUser(first,last,email,code,approved,status,price) {
+            $.ajax({
+                type: "POST",
+                contentType: 'application/json',
+                url: "/LumberService.asmx/UpdateUser",
+                dataType: 'json',
+                data: JSON.stringify({
+                    first: first,
+                    last: last,
+                    email: email,
+                    code: code,
+                    approved: approved,
+                    status: status,
+                    price:price
+                }),
+                success: function (result) {
+                    console.log("result.d = " + result.d);
+                    if (result.d == "OK") {
+                        location.reload();
+                    }
+                    else {
+                        $('#login-text').html("Bad email or password.");
+                    }
+                },
+                error: function (jqXHR, status, error) {
+                    $('#login-text').html("Unable to login. Please, try later.");
+                }
+            });
+        }
+
+        function deleteUser(email) {
+            $.ajax({
+                type: "POST",
+                contentType: 'application/json',
+                url: "/LumberService.asmx/DeleteUser",
+                dataType: 'json',
+                data: JSON.stringify({
+                    email: email
+                }),
+                success: function (result) {
+                    console.log("result.d = " + result.d);
+                    if (result.d == "OK") {
+                        location.reload();
+                    }
+                    else {
+                        alert(result.d);
+                    }
+                },
+                error: function (jqXHR, status, error) {
+                    alert("Unable to delete " + email + ".");
+                }
+            });
+        }
+
+        function loginUser() {
+            var email = $('#login-email').val();
+            var password = $('#login-password').val();
+
+            $.ajax({
+                type: "POST",
+                contentType: 'application/json',
+                url: "/LumberService.asmx/Authenticate",
+                dataType: 'json',
+                data: JSON.stringify({
+                    email: email,
+                    password: password
+                }),
+                success: function (result) {
+                    console.log("result.d = " + result.d);
+                    if (result.d == "OK") {
+                        location.reload();
+                    }
+                    else {
+                        $('#login-text').html(result.d);
+                    }
+                },
+                error: function (jqXHR, status, error) {
+                    $('#login-text').html("Unable to login. Please, try later.");
+                }
+            });
+        }
+
+        function logoutUser() {
+            $.ajax({
+                type: "POST",
+                contentType: 'application/json',
+                url: "/LumberService.asmx/Logout",
+                dataType: 'json',
+                success: function (result) {
+                    location.reload();
+                    console.log("result.d = " + result.d);
+                },
+                error: function (jqXHR, status, error) {
+                    alert("Unable to logout. Please, try later.");
+                }
+            });
+        }
+
+        function updateContact(id, name, email, title, phone, fax, mobile, image, show) {
+            if (name == null)name = "";
+            if (email == null) email = "";
+            if (title == null) title = "";
+            if (phone == null) phone = "";
+            if (fax == null) fax = "";
+            if (mobile == null) mobile = "";
+            if (image == null) image = "";
+            if (show == null) show = false;
+            $.ajax({
+                type: "POST",
+                contentType: 'application/json',
+                url: "/Services/ContactService.asmx/Update",
+                dataType: 'json',
+                data: JSON.stringify({
+                    id:id,
+                    name:name,
+                    email: email,
+                    title:title,
+                    phone:phone,
+                    fax:fax,
+                    mobile:mobile,
+                    image: image,
+                    show: show
+                }),
+                success: function (result) {
+                    console.log("result.d = " + result.d);
+                    if (result.d == "OK") {
+                        location.reload();
+                    }
+                    else {
+                        alert(result.d);
+                    }
+                },
+                error: function (jqXHR, status, error) {
+                    alert("Unable to update "+name+".");
+                }
+            });
+        }
+
+        function deleteContact(id) {
+            $.ajax({
+                type: "POST",
+                contentType: 'application/json',
+                url: "/Services/ContactService.asmx/Delete",
+                dataType: 'json',
+                data: JSON.stringify({
+                    id: id
+                }),
+                success: function (result) {
+                    console.log("result.d = " + result.d);
+                    if (result.d == "OK") {
+                        location.reload();
+                    }
+                    else {
+                        alert(result.d);
+                    }
+                },
+                error: function (jqXHR, status, error) {
+                    alert("Unable to delete " + name + ".");
+                }
+            });
+        }
+
+        function insertContact() {
+            $.ajax({
+                type: "POST",
+                contentType: 'application/json',
+                url: "/Services/ContactService.asmx/Add",
+                dataType: 'json',
+                success: function (result) {
+                    console.log("result.d = " + result.d);
+                    if (result.d == "OK") {
+                        location.reload();
+                    }
+                    else {
+                        alert(result.d);
+                    }
+                },
+                error: function (jqXHR, status, error) {
+                    alert("Unable to insert contact.");
+                }
+            });
+        }
+
+        $(document).ready(function () {
+            console.log('starting jquery');
+            if( $('#slideshow').length > 1 )
+                setInterval("slideSwitch()", 10000);
+            if( $('#sideshow').length > 1 )
+                setInterval("sideSwitch()", 10000);
+
+            $('#login-button').click(function () {
+                loginUser();
+            });
+
+            $('#register-button').click(function () {
+                registerUser();
+            });
+
+            $('#go-register-button').click(function () {
+                document.location = "/register";
+            });
+
+            $('#logout-button').click(function () {
+                logoutUser();
+            });
+
+            $('.update-button').click(function () {
+                var id = $(this).data('id');
+                var first = $('#first-'+id).val();
+                var last = $('#last-'+id).val();
+                var email = $('#email-' + id).val();
+                var code = $('#code-' + id).val();
+                var approved = $('#approved-' + id).prop('checked'); 
+                var price = $('#price-' + id).val();
+                if (price == null)
+                    price = "";
+                var status = $('#status-' + id).val();
+                alert(first + " " + last + " " + email);
+                updateUser(first,last,email,code,approved,status,price);
+            });
+
+            $('.delete-button').click(function () {
+                var id = $(this).data('id');
+                var email = $('#email-' + id).val();
+                deleteUser(email);
+            });
+
+            $('.update-contact-button').click(function () {
+                var id = $(this).data('id');
+                var name= $('#name-' + id).val();
+                var title = $('#title-' + id).val();
+                var email = $('#email-' + id).val();
+                var mobile = $('#mobile-' + id).val();
+                var fax = $('#fax-' + id).val();
+                var phone = $('#phone-' + id).val();
+                var image = $('#image-' + id).val();
+                var show = $('#show-' + id).prop('checked');
+                updateContact(id,name,email,title,phone,fax,mobile,image,show);
+            });
+
+            $('.delete-contact-button').click(function () {
+                var id = $(this).data('id');
+                deleteContact(id);
+            });
+
+            $('#insert-contact-button').click(function () {
+                insertContact();
+            });
+        });
+
+        function registerUser() {
+            var email = $('#register-email').val();
+            var password = $('#register-password').val();
+            var first = $('#register-first').val();
+            var last = $('#register-last').val();
+            var data = JSON.stringify({
+                email: email,
+                password: password,
+                first: first,
+                last: last
+            });
+
+            $.ajax({
+                type: "POST",
+                contentType: 'application/json',
+                url: "LumberService.asmx/Register",
+                dataType: 'json',
+                data: data,
+                success: function (result) {
+                    console.log("result.d = " + result.d);
+                    if (result.d == "OK") {
+                        $('#register-text').html("You have successfully registered.");
+                        $('#register-input').css('display', 'none');
+                    }
+                    else {
+                        $('#register-text').html('Unable to register because ' + result.d);
+                    }
+                },
+                error: function (jqXHR, status, error) {
+                    $('#register-text').html("Unable to register. Please, try later.");
+                }
+            });
+        }
+
+        $(function () {
+
+        });
+
+        function setCookie(c_name, value, exdays) {
+            var exdate = new Date();
+            exdate.setDate(exdate.getDate() + exdays);
+            var c_value = escape(value) + ((exdays == null) ? "" : "; expires=" + exdate.toUTCString());
+            document.cookie = c_name + "=" + c_value + ";path=/";
+        }
+
+        function getCookie(c_name) {
+            var c_value = document.cookie;
+            var c_start = c_value.indexOf(" " + c_name + "=");
+            if (c_start == -1) {
+                c_start = c_value.indexOf(c_name + "=");
+            }
+            if (c_start == -1) {
+                c_value = null;
+            }
+            else {
+                c_start = c_value.indexOf("=", c_start) + 1;
+                var c_end = c_value.indexOf(";", c_start);
+                if (c_end == -1) {
+                    c_end = c_value.length;
+                }
+                c_value = unescape(c_value.substring(c_start, c_end));
+            }
+            return c_value;
+        }
+    </script>
+    <asp:ContentPlaceHolder runat="server" ID="ScriptContent" />
+    <fuc:FooterControl id="footerControl" runat="server" />
+  </body>
+</html>

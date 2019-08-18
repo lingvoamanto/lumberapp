@@ -1,0 +1,69 @@
+﻿<Properties StartupConfiguration="{078B3C4F-C377-460E-8838-DA3EED6D0BDA}|">
+  <MonoDevelop.Ide.ItemProperties.LumberCorp PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Edit.aspx">
+    <Files>
+      <File FileName="Pages/Default.aspx" Line="32" Column="70" />
+      <File FileName="Classes/StockItem.cs" Line="288" Column="1" />
+      <File FileName="Repository/Price.cs" Line="29" Column="35" />
+      <File FileName="Repository/Contact.cs" Line="344" Column="1" />
+      <File FileName="Classes/User.cs" Line="34" Column="27" />
+      <File FileName="Pages/Users.aspx" Line="49" Column="140" />
+      <File FileName="Pages/Users.aspx.cs" Line="45" Column="29" />
+      <File FileName="Repository/ContentManagementSystem.cs" Line="37" Column="1" />
+      <File FileName="Pages/Cart.aspx" Line="5" Column="47" />
+      <File FileName="Pages/Stock.aspx.cs" Line="1" Column="1" />
+      <File FileName="Classes/Pagination.cs" Line="13" Column="1" />
+      <File FileName="Global.asax" Line="1" Column="1" />
+      <File FileName="Global.asax.cs" Line="45" Column="53" />
+      <File FileName="EditImages.aspx" Line="4" Column="1" />
+      <File FileName="Pages/EditContacts.aspx" Line="2" Column="53" />
+      <File FileName="Edit.aspx" Line="2" Column="68" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="LumberCorp" expanded="True">
+            <Node name="LumberCorp" expanded="True">
+              <Node name="References" expanded="True" />
+              <Node name="Classes" expanded="True" />
+              <Node name="Controls" expanded="True" />
+              <Node name="css" expanded="True" />
+              <Node name="Handlers" expanded="True" />
+              <Node name="Pages" expanded="True">
+                <Node name="Default.aspx" expanded="True" />
+                <Node name="Stock.aspx" expanded="True" />
+                <Node name="Users.aspx" expanded="True" />
+              </Node>
+              <Node name="Repository" expanded="True" />
+              <Node name="Services" expanded="True" />
+              <Node name="Edit.aspx" selected="True" />
+              <Node name="Global.asax" expanded="True" />
+              <Node name="LumberService.asmx" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/mikaelaldridge/Dropbox/LumberCorp-sales/LumberCorp/Repository/ContentManagementSystem.cs" relfile="Repository/ContentManagementSystem.cs" line="14" column="1" />
+      <Breakpoint file="/Users/mikaelaldridge/Dropbox/LumberCorp-sales/LumberCorp/Repository/ContentManagementSystem.cs" relfile="Repository/ContentManagementSystem.cs" line="175" column="1" />
+      <Breakpoint file="/Users/mikaelaldridge/Dropbox/LumberCorp-sales/LumberCorp/Repository/ContentManagementSystem.cs" relfile="Repository/ContentManagementSystem.cs" line="198" column="1" />
+      <Breakpoint file="/Users/mikaelaldridge/Dropbox/LumberCorp-sales/LumberCorp/Repository/ContentManagementSystem.cs" relfile="Repository/ContentManagementSystem.cs" line="223" column="1" />
+      <Breakpoint file="/Users/mikaelaldridge/Dropbox/LumberCorp-sales/LumberCorp/Repository/ContentManagementSystem.cs" relfile="Repository/ContentManagementSystem.cs" line="297" column="1" />
+      <Breakpoint file="/Users/mikaelaldridge/Dropbox/LumberCorp-sales/LumberCorp/Repository/ContentManagementSystem.cs" relfile="Repository/ContentManagementSystem.cs" line="332" column="1" />
+      <Breakpoint file="/Users/mikaelaldridge/Dropbox/LumberCorp-sales/LumberCorp/Repository/ContentManagementSystem.cs" relfile="Repository/ContentManagementSystem.cs" line="370" column="1" />
+      <Breakpoint file="/Users/mikaelaldridge/Dropbox/LumberCorp-sales/LumberCorp/Classes/OrderItem.cs" relfile="Classes/OrderItem.cs" line="81" column="1" />
+      <Breakpoint file="/Users/mikaelaldridge/Dropbox/LumberCorp-sales/LumberCorp/Classes/StockItem.cs" relfile="Classes/StockItem.cs" line="292" column="1" />
+      <Breakpoint file="/Users/mikaelaldridge/Dropbox/LumberCorp-sales/LumberCorp/Pages/Cart.aspx" relfile="Pages/Cart.aspx" line="31" column="1" />
+      <Breakpoint file="/Users/mikaelaldridge/Dropbox/LumberCorp-sales/LumberCorp/Pages/Users.aspx" relfile="Pages/Users.aspx" line="37" column="33" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
